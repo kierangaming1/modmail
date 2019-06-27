@@ -1,4 +1,4 @@
-__version__ = "3.0.0"
+__version__ = "3.0.1"
 
 import asyncio
 import logging
@@ -398,6 +398,7 @@ class ModmailBot(commands.Bot):
                 silent=items["silent"],
                 delete_channel=items["delete_channel"],
                 message=items["message"],
+                auto_close=items.get("auto_close", False)
             )
 
         logger.info(LINE)
